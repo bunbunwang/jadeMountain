@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nq4-oT-XMY">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Color Change View Controller-->
+        <scene sceneID="feS-2z-xzb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="nq4-oT-XMY" customClass="colorChangeViewController" customModule="jadeMountain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EaG-yf-O0B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-X4-67g" userLabel="upView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="397"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92939221858978271" green="0.28622031211853027" blue="0.36261448264122009" alpha="0.70432898119999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CMd-6F-wk9" userLabel="downView">
+                                <rect key="frame" x="-20" y="393" width="411" height="419"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71968483920000004" green="0.8021726012" blue="0.85445755720000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jadeMoutain " translatesAutoresizingMaskIntoConstraints="NO" id="zPF-7L-E91" userLabel="jadeMoutain">
+                                <rect key="frame" x="0.0" y="0.0" width="403" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jadeMoutainAlpha" translatesAutoresizingMaskIntoConstraints="NO" id="niA-W3-Ssk" userLabel="jadeMoutainSkyLand">
+                                <rect key="frame" x="0.0" y="0.0" width="403" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oVl-Gd-AI0">
+                                <rect key="frame" x="23" y="475" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.64483010768890381" green="0.17905250191688538" blue="0.1174871101975441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.64483010768890381" green="0.17905250191688538" blue="0.1174871101975441" alpha="0.81798480309999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="coloreChange:" destination="nq4-oT-XMY" eventType="valueChanged" id="RXk-eu-jbx"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jgn-Y2-bgw" userLabel="Blue Slider">
+                                <rect key="frame" x="14" y="602" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.12647584079999999" green="0.28971883650000002" blue="0.98489743470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.29095453269999999" green="0.79420891829999996" blue="1" alpha="0.91235017119999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="coloreChange:" destination="nq4-oT-XMY" eventType="valueChanged" id="sTB-bP-d96"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JY5-pL-pqT">
+                                <rect key="frame" x="21" y="709" width="328" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.19986432790756226" green="0.43893027305603027" blue="0.099839173257350922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.25255578756332397" green="0.58577394485473633" blue="0.52282923460006714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="coloreChange:" destination="nq4-oT-XMY" eventType="valueChanged" id="OKK-op-85p"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TEw-9R-Yrt"/>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="Jgn-Y2-bgw" id="eta-GL-0Cr"/>
+                        <outlet property="downView" destination="CMd-6F-wk9" id="zin-hu-g27"/>
+                        <outlet property="greenSlider" destination="JY5-pL-pqT" id="hEK-gL-y9o"/>
+                        <outlet property="redSlider" destination="oVl-Gd-AI0" id="knU-iy-5D0"/>
+                        <outlet property="upView" destination="ARA-X4-67g" id="9hq-kT-Pcn"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYh-yr-o53" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jadeMoutain " width="611" height="710"/>
+        <image name="jadeMoutainAlpha" width="611" height="710"/>
+    </resources>
 </document>
